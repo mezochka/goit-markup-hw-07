@@ -12,45 +12,55 @@
 <body>
     <!-- head of info -->
     <header class="style">
-        <div class="container main-nav">
-            <nav class="main-nav">
-                <a href="./index.html" class="logo">Web<span class="logo-style">Studio</span></a>
+        <div class="container head-wrap">
+            <nav class="nav">
+                <a href="./index.html" class="logo">Web<span class="logo__style">Studio</span></a>
 
                 <ul class="list site-nav">
-                    <li class="nav-item"><a href="./index.html" class="link current">Студия</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                    <li class="nav-item"><a href="./index.html" class="link">Контакты</a></li>
+                    <li class="site-nav__item">
+                        <a href="./index.html" class="link site-nav__link site-nav__link--current">Студия</a>
+                    </li>
+
+                    <li class="site-nav__item">
+                        <a href="./portfolio.html" class="link site-nav__link">Портфолио</a>
+                    </li>
+
+                    <li class="site-nav__item">
+                        <a href="./index.html" class="link site-nav__link">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-                <ul class="list contacts header-c">
-                    <li class="nav-item">
-                        <a href="mailto:info@devstudio.com" class="link">
-                            <svg class="item-f" width="16" height="12">
-                                <use href="./image/icons.svg#icon-envelope-opt"></use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="tel:+380961111111" class="link">
-                        <svg class="item-f" width="10" height="16">
-                            <use href="./image/icons.svg#icon-smartphone-opt"></use>
+
+            <ul class="list contacts">
+                <li class="contacts__item">
+                    <a href="mailto:info@devstudio.com" class="link contacts__link">
+                        <svg class="contacts__icon" width="16" height="12">
+                            <use href="./image/icons.svg#icon-envelope-opt"></use>
                         </svg>
-                        +38 096 111 11 11
-                        </a> 
-                    </li>
-                </ul>
+                        info@devstudio.com
+                    </a>
+                </li>
+                <li class="contacts__item">
+                    <a href="tel:+380961111111" class="link contacts__link">
+                    <svg class="contacts__icon" width="10" height="16">
+                        <use href="./image/icons.svg#icon-smartphone-opt"></use>
+                    </svg>
+                    +38 096 111 11 11
+                    </a> 
+                </li>
+            </ul>
+                
         </div>
     </header>
 
     <main>
         <!-- hero -->
-            <section class="hero accent-bg">
+            <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
                <button type="button" class="button" data-modal-open>Заказать услугу</button>
                <div class="backdrop is-hidden" data-modal>
-                    <!-- is-hidden for backdrop-->
+                    
                    <div class="modal">
                     
                         <form class="registr" autocomplete="off">
@@ -112,9 +122,9 @@
         <!-- competencies -->
         <section class="section">
             <div class="container">
-                <!-- hidden title -->
+               
                 <h2 class="section-title" hidden>Наши компетенции</h2>
-                <!-- end of hidden title -->
+                
                 <ul class="list competencies">
                     <li class="comp-item">
                         <div class="items-s">
@@ -193,38 +203,38 @@
                         <div class="staff-stand">
                             <h3 class="title">Игорь Демьяненко</h3>
                             <p lang="en" class="staff-name">Product Designer</p>
-                            <ul class="list staffing">
+                            <ul class="list socials">
 
-                                <li class="staff-margin"> 
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item"> 
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-instagram-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
 
-                                <li class="staff-margin"> 
-                                    <a href="" class="staff-icon">
-                                    <svg class="color-icon" width="20" height="20">
-                                        <use href="./image/icons.svg#icon-twitter-opt"></use>
-                                    </svg>
-                                </a>
+                                <li class="socials__item"> 
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
+                                            <use href="./image/icons.svg#icon-twitter-opt"></use>
+                                        </svg>
+                                    </a>
                                 </li>
 
-                                <li class="staff-margin"> 
-                                    <a href="" class="staff-icon">
-                                    <svg class="color-icon" width="20" height="20">
-                                        <use href="./image/icons.svg#icon-facebook-opt"></use>
-                                    </svg>
-                                </a>
+                                <li class="socials__item"> 
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
+                                            <use href="./image/icons.svg#icon-facebook-opt"></use>
+                                        </svg>
+                                     </a>
                                 </li>
 
-                                <li class="staff-margin"> 
-                                    <a href="" class="staff-icon">
-                                    <svg class="color-icon" width="20" height="20">
-                                        <use href="./image/icons.svg#icon-linkedin-opt"></use>
-                                    </svg>
-                                </a>
+                                <li class="socials__item"> 
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
+                                            <use href="./image/icons.svg#icon-linkedin-opt"></use>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -236,33 +246,33 @@
                             <p lang="en" class="staff-name">Frontend Developer</p>
                             <ul class="list staffing">
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-instagram-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-twitter-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-facebook-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-linkedin-opt"></use>
                                         </svg>
                                     </a>
@@ -277,33 +287,33 @@
                             <p lang="en" class="staff-name">Marketing</p>
                             <ul class="list staffing">
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-instagram-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-twitter-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-facebook-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-linkedin-opt"></use>
                                         </svg>
                                     </a>
@@ -318,33 +328,33 @@
                             <p lang="en" class="staff-name">UI Designer</p>
                             <ul class="list staffing">
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-instagram-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-twitter-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-facebook-opt"></use>
                                         </svg>
                                     </a>
                                 </li>
                             
-                                <li class="staff-margin">
-                                    <a href="" class="staff-icon">
-                                        <svg class="color-icon" width="20" height="20">
+                                <li class="socials__item">
+                                    <a href="" class="socials__link">
+                                        <svg class="socials__icon" width="20" height="20">
                                             <use href="./image/icons.svg#icon-linkedin-opt"></use>
                                         </svg>
                                     </a>
@@ -410,50 +420,56 @@
         </section>
     </main>
 
-    <footer class="accent-bg">
-        <div class="container flex">
+    <footer class="footer">
+        <div class="container footer-wrap">
             <div>
-            <a href="./index.html" class="logo logo-f">Web<span class="logo-style logo-footer">Studio</span></a>
+            <a href="./index.html" class="logo logo__position">Web<span class="logo__style logo__color">Studio</span></a>
             <address>
-                <ul class="list contacts">
-                    <li class="adress">г. Киев, пр-т Леси Украинки, 26</li> 
-                    <li class="adress"><a href="mailto:info@devstudio.com" class="link link-design">info@devstudio.com</a></li>
-                    <li><a href="tel:+380961111111" class="link link-design">+38 096 111 11 11</a></li>
+                <ul class="list address">
+                    <li class="address__item">г. Киев, пр-т Леси Украинки, 26</li> 
+
+                    <li class="address__item">
+                        <a href="mailto:info@devstudio.com" class="link address__link">info@devstudio.com</a>
+                    </li>
+
+                    <li>
+                        <a href="tel:+380961111111" class="link address__link">+38 096 111 11 11</a>
+                    </li>
                 </ul>
             </address>
             </div>
 
             <div class="footer-stand">
-             <p class="footer-header">Присоединяйтесь</p>
-                <ul class="list staffing">
+                <p class="footer-stand__header">Присоединяйтесь</p>
+                <ul class="list socials">
                 
-                    <li class="circle">
-                        <a href="" class="footer-icon">
-                            <svg class="color-footer-icon" width="20" height="20">
+                    <li class="socials__item">
+                        <a href="" class="socials__link">
+                            <svg class="socials__icon" width="20" height="20">
                                 <use href="./image/icons.svg#icon-instagram-opt"></use>
                             </svg>
                         </a>
                     </li>
                 
-                    <li class="circle">
-                        <a href="" class="footer-icon">
-                            <svg class="color-footer-icon" width="20" height="20">
+                    <li class="socials__item">
+                        <a href="" class="socials__link">
+                            <svg class="socials__icon" width="20" height="20">
                                 <use href="./image/icons.svg#icon-twitter-opt"></use>
                             </svg>
                         </a>
                     </li>
                 
-                    <li class="circle">
-                        <a href="" class="footer-icon">
-                            <svg class="color-footer-icon" width="20" height="20">
+                    <li class="socials__item">
+                        <a href="" class="socials__link">
+                            <svg class="socials__icon" width="20" height="20">
                                 <use href="./image/icons.svg#icon-facebook-opt"></use>
                             </svg>
                         </a>
                     </li>
                 
-                    <li class="circle">
-                        <a href="" class="footer-icon">
-                            <svg class="color-footer-icon" width="20" height="20">
+                    <li class="socials__item">
+                        <a href="" class="socials__link">
+                            <svg class="socials__icon" width="20" height="20">
                                 <use href="./image/icons.svg#icon-linkedin-opt"></use>
                             </svg>
                         </a>
