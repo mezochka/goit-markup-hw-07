@@ -1,0 +1,39 @@
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials__item+.socials__item {
+    margin-left: 10px;
+}
+
+.socials__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-icon);
+
+    transition: background-color var(--duration) var(--timing-function),
+        color var(--duration) var(--timing-function);
+}
+
+.socials__icon {
+    fill: currentColor;
+}
+/* this selector should be placed before 
+"social__link hover" selector, because of same 
+specifity */
+
+.footer-stand .socials__link {
+    background-color: var(--bg-icon-footer);
+    color: var(--primary-white-color);
+}
+
+.socials__link:hover,
+.socials__link:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-white-color);
+}
