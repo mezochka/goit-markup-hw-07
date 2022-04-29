@@ -64,7 +64,7 @@
 }
 
 .reg-form {
-    @include dlex (flex, center);
+    @include flex (flex, center);
     flex-direction: column;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .reg-form__agreement {
-    @include dlex (flex, center);
+    @include flex (flex, center);
 
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -194,7 +194,7 @@
 }
 
 .reg-form__button {
-    @include dlex (flex, center, center);
+    @include flex (flex, center, center);
 
     width: 200px;
     height: 50px;

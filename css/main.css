@@ -145,7 +145,7 @@ img {
   content: '';
   position: absolute;
   width: 100%;
-  bottom: -1px;
+  bottom: -1.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,8 +231,8 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--bg-color-footer-header);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/main-img-sq.jpg);
-  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/main-img-sq.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/main-img-sq.jpg");
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/main-img-sq.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -343,13 +343,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .reg-form__header {
@@ -483,12 +483,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   height: 50px;
   margin: 0 auto;
@@ -597,6 +597,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -642,6 +645,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -667,14 +673,14 @@ specifity */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 44px;
-  height: 44px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: var(--color-icon);
   -webkit-transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function);

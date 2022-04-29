@@ -1,7 +1,7 @@
 .socials {
     @extend %list;
 
-    @include dlex (flex, none, center);
+    @include flex (flex, none, center);
 
     &__icon {
         fill: currentColor;
@@ -22,7 +22,7 @@ specifity */
 }
 
 .socials__link {
-    @include dlex (flex, center, center);
+    @include flex (flex, center, center);
     
     width: 44px;
     height: 44px;

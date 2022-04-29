@@ -1,7 +1,7 @@
 .staff {
     @extend %list;
     
-    @include dlex (flex, none, center);
+    @include flex (flex, none, center);
 }
 
 .staff__name {
