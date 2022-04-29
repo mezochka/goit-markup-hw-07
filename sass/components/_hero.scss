@@ -51,10 +51,10 @@
 
     transition: background var(--duration) var(--timing-function),
         box-shadow var(--duration) var(--timing-function);
+
+        &:hover, &:focus {
+            background: var(--hover-button-color);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
 }
 
-.hero__button:hover,
-.hero__button:focus {
-    background: var(--hover-button-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}

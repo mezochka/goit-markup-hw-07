@@ -4,13 +4,12 @@
     text-decoration: none;
 
     transition: box-shadow var(--duration) var(--timing-function);
-}
 
-.project:hover,
-.project:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover, &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .project__img-wrap {
@@ -39,12 +38,12 @@
 
     transform: translateY(101%);
     transition: transform var(--duration) var(--timing-function);
-}
 
-.project:hover .project__overlay,
-.project:focus .project__overlay {
-    opacity: 1;
-    transform: translateY(0);
+    .project:hover &,
+    .project:focus & {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .project__info {

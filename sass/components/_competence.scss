@@ -1,25 +1,25 @@
 .competence {
+    @extend %list;
+    
     display: flex;
 }
 
 .competence__item {
     width: 270px;
+
+    &+& {
+        margin-left: 30px;
+    }
 }
 
 .competence__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    @include flex (flex, center, center);
+    
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
 
     background-color: var(--bg-color-filter);
-}
-
-.competence__item+.competence__item {
-    margin-left: 30px;
 }
 
 .competence__title {

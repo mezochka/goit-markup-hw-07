@@ -18,12 +18,15 @@
     --duration: 250ms;
 }
 
+// common styles 
+
 body {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;
     font-size: 14px;
 }
+
 .container {
     width: 1200px;
     margin-left: auto;
@@ -38,22 +41,17 @@ img {
     height: auto;
 }
 
-.list {
-    list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
-
-.link {
-    text-decoration: none;
-
-    transition: color var(--duration) var(--timing-function);
-}
-
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    &:nth-child(3n) {
+        padding-top: 0;
+    }
+
+    &:nth-child(4n) {
+        background-color: var(--bg-color-filter);
+    }
 }
 
 .section__title {

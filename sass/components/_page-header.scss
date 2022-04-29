@@ -3,39 +3,39 @@
 }
 
 .head-wrap {
-    display: flex;
-    align-items: center;
+    @include flex (flex, center);
 }
 
 .nav {
-    display: flex;
-    align-items: center;
+    @include flex (flex, center);
 }
-.site-nav__item .link:hover,
-.site-nav__item .link:focus,
-.link:hover,
-.link:focus {
-    color: var(--accent-color);
-}
+
 .site-nav {
+    @extend %list;
+
     display: flex;
     margin-left: 93px;
 }
 
 .site-nav__item {
-    display: flex;
-    align-items: center;
+    @include flex (flex, center);
 
     color: var(--primary-text-color);
 
     position: relative;
-}
 
-.site-nav__item+.site-nav__item {
+    &:hover, &:focus {
+    color: var(--accent-color);
+    }
+
+    &+& {
     margin-left: 50px;
+    }
 }
 
 .site-nav__link {
+    @extend %link;
+
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -44,27 +44,29 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    transition: color var(--duration) var(--timing-function);
+
+    &--current {
+        color: var(--accent-color);
+    }
+
+    &--current::after {
+        content: '';
+        
+        position: absolute;
+        width: 100%;
+        bottom: -1px;
+        
+        display: flex;
+        
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+    }
 }
 
-.site-nav__link--current {
-    color: var(--accent-color);
-}
-
-.site-nav__link--current::after {
-    content: '';
-
-    position: absolute;
-    width: 100%;
-    bottom: -1px;
-
-    display: flex;
-
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-}
 .contacts {
+    @extend %list;
+    
     display: flex;
     margin-left: auto;
 
@@ -73,15 +75,16 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-}
 
-.contacts__item+.contacts__item {
-    margin-left: 30px;
+    &__item+&__item {
+        margin-left: 30px;
+    }
 }
 
 .contacts__link {
-    display: flex;
-    align-items: center;
+    @extend %link;
+
+    @include flex (flex, center);
 
     padding-top: 32px;
     padding-bottom: 32px;
@@ -90,8 +93,6 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-
-    transition: color var(--duration) var(--timing-function);
 }
 
 .contacts__icon {

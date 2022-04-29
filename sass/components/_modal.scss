@@ -12,16 +12,12 @@
 
     transition: opacity var(--duration) var(--timing-function),
         visibility var(--duration) var(--timing-function);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.backdrop.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(2);
+        &.is-hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
 }
 
 /* subsection modal  */
@@ -44,6 +40,10 @@
     border-radius: 4px;
 
     transition: transform var(--duration) var(--timing-function);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(2);
+    }
 }
 
 .modal__button {
@@ -57,17 +57,15 @@
     cursor: pointer;
 
     transition: color var(--duration) var(--timing-function);
-}
 
-.modal__button:hover,
-.modal__button:focus {
-    color: var(--accent-color);
+    &:hover, &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .reg-form {
-    display: flex;
+    @include dlex (flex, center);
     flex-direction: column;
-    align-items: center;
 }
 
 .reg-form__header {
@@ -90,6 +88,10 @@
     color: var(--primary-text-color);
     position: relative;
     margin-bottom: 10px;
+
+    &:nth-child(5n) {
+        margin-bottom: 20px;
+    }
 }
 
 .reg-form__input {
@@ -104,6 +106,11 @@
     color: rgba(117, 117, 117, 0.5);
 
     transition: border-color var(--duration) var(--timing-function);
+
+    .reg-form__item:focus-within & {
+        border-color: var(--accent-color);
+        outline: none;
+    }
 }
 
 .reg-form__icon {
@@ -113,15 +120,10 @@
     fill: currentColor;
     color: var(--secondary-logo-color);
     transition: color var(--duration) var(--timing-function);
-}
 
-.reg-form__item:focus-within .reg-form__icon {
-    color: var(--accent-color);
-}
-
-.reg-form__item:focus-within .reg-form__input {
-    border-color: var(--accent-color);
-    outline: none;
+    .reg-form__item:focus-within & {
+        color: var(--accent-color);
+    }
 }
 
 .reg-form__text {
@@ -143,13 +145,8 @@
     letter-spacing: 0.01em;
 }
 
-.reg-form__item:nth-child(5n) {
-    margin-bottom: 20px;
-}
-
 .reg-form__agreement {
-    display: flex;
-    align-items: center;
+    @include dlex (flex, center);
 
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -178,19 +175,18 @@
 
     transition: border-color var(--duration) var(--timing-function),
         background-color var(--duration) var(--timing-function);
-}
 
-.reg-form__checkbox:checked+.reg-form__custom-checkbox {
-    background-color: var(--accent-color);
-    background-image: url(../image/vector-1.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    border-color: var(--accent-color);
-}
+    .reg-form__checkbox:checked+& {
+        background-color: var(--accent-color);
+        background-image: url(../image/vector-1.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border-color: var(--accent-color);
+    }
 
-.reg-form__checkbox:focus+.reg-form__custom-checkbox,
-.reg-form__checkbox:hover+.reg-form__custom-checkbox {
-    border-color: var(--accent-color);
+    .reg-form__checkbox:focus+&, .reg-form__checkbox:hover+&{
+        border-color: var(--accent-color);
+    }
 }
 
 .reg-form__policy {
@@ -198,9 +194,7 @@
 }
 
 .reg-form__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dlex (flex, center, center);
 
     width: 200px;
     height: 50px;

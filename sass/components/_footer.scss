@@ -4,11 +4,13 @@
     background-color: var(--bg-color-footer-header);
 }
 
-.footer-wrap {
-    display: flex;
-    align-items: baseline;
+.footer__wrap {
+    @include flex (flex, baseline);
 }
+
 .address {
+    @extend %list;
+    
     line-height: 1.7;
     font-style: normal;
 }
@@ -19,6 +21,8 @@
 }
 
 .address__link {
+    @extend %link;
+
     color: var(--font-color-link-footer);
 }
 
@@ -39,6 +43,10 @@
 
 .form {
     margin-left: auto;
+
+    &__icon {
+        margin-left: 10px;
+    }
 }
 
 .wrapper {
@@ -57,7 +65,6 @@
     border-radius: 4px;
     background-color: var(--bg-color-footer-header);
     color: var(--font-color-link-footer);
-
 }
 
 .form__message {
@@ -73,8 +80,8 @@
 }
 
 .form__button {
-    display: flex;
-    align-items: center;
+    @include flex (flex, center);
+
     text-align: center;
     width: 200px;
     margin-left: 12px;
@@ -91,8 +98,4 @@
     border-radius: 4px;
 
     cursor: pointer;
-}
-
-.form__icon {
-    margin-left: 10px;
 }

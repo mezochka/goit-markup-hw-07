@@ -12,14 +12,13 @@
     letter-spacing: 0.03em;
 }
 
-.logo:hover .logo__style,
-.logo:focus .logo__style {
-    color: var(--accent-color);
-}
-
 .logo__style {
     color: var(--secondary-logo-color);
     transition: color var(--duration) var(--timing-function);
+
+    .logo:hover &, .logo:focus & {
+        color: var(--accent-color);
+    }
 }
 
 .logo__color {

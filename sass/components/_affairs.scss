@@ -1,26 +1,22 @@
-/* exception for padding in this section  */
-.section:nth-child(3n) {
-    padding-top: 0;
-}
-
 .affairs {
-    display: flex;
-}
+    @extend %list;
 
-.affairs__item+.affairs__item {
+    display: flex;
+
+    &__item+&__item {
     margin-left: 30px;
+    }
 }
 
 .affairs__card {
     position: relative;
-    display: flex;
-    align-items: flex-end;
+
+    @include flex (flex, flex-end);
 }
 
 .affairs__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex (flex, center, center);
+    
     margin: 0;
     width: 370px;
     height: 70px;

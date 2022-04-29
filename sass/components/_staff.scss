@@ -1,10 +1,7 @@
-.section:nth-child(4n) {
-    background-color: var(--bg-color-filter);
-}
-
 .staff {
-    display: flex;
-    justify-content: center;
+    @extend %list;
+    
+    @include dlex (flex, none, center);
 }
 
 .staff__name {
@@ -40,8 +37,8 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
 
-.staff__item+.staff__item {
-    margin-left: 30px;
+    &+& {
+        margin-left: 30px;
+    }
 }
