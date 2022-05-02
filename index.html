@@ -7,7 +7,6 @@
     <title>WebStudio</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -499,22 +498,20 @@
                 </ul>
             </div>
 
-            <form class="form">
+            <div class="form">
                 <p class="form__message">Подпишитесь на рассылку</p>
-
-                <div class="wrapper">
-                    <input type="email" name="mailing" id="mailing" placeholder="Email" class="form__input">
-                    <button type="submit" class="form__button">
-                        Подписаться
-                        <svg width="24" height="24" class="form__icon">
-                            <use href="./image/icons.svg#icon-icon-send-1">
-                            </use>
-                        </svg>
-                    </button>
-                </div>
-
-            </form>
-        </div>
+                <form class="wrapper">
+                        <input type="email" name="mailing" id="mailing" placeholder="Email" class="form__input">
+                        <button type="submit" class="form__button">
+                            Подписаться
+                            <svg width="24" height="24" class="form__icon">
+                                <use href="./image/icons.svg#icon-icon-send-1">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
     </footer>
     <script src="./js/modal.js"></script>
 </body>

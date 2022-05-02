@@ -46,22 +46,7 @@
     }
 }
 
-.modal__button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
 
-    padding: 0;
-    border: none;
-    background-color: var(--primary-white-color);
-    cursor: pointer;
-
-    transition: color var(--duration) var(--timing-function);
-
-    &:hover, &:focus {
-        color: var(--accent-color);
-    }
-}
 
 .reg-form {
     @include flex (flex, center);
@@ -193,23 +178,3 @@
     color: var(--accent-color);
 }
 
-.reg-form__button {
-    @include flex (flex, center, center);
-
-    width: 200px;
-    height: 50px;
-    margin: 0 auto;
-
-    border: none;
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.06em;
-    color: var(--primary-white-color);
-
-    cursor: pointer;
-}

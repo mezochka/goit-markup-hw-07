@@ -25,18 +25,35 @@ body {
   font-size: 14px;
 }
 
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+
+.site-nav, .contacts, .competence, .affairs, .staff, .socials, .clients, .address, .filter, .examples {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.site-nav__link, .contacts__link, .address__link {
+  text-decoration: none;
+  -webkit-transition: color var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function);
+}
+
+.site-nav__link:hover, .contacts__link:hover, .address__link:hover, .site-nav__link:focus, .contacts__link:focus, .address__link:focus {
+  color: var(--accent-color);
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
-}
-
-img {
-  display: block;
-  min-width: 100%;
-  height: auto;
 }
 
 .section {
@@ -60,36 +77,6 @@ img {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-.site-nav, .contacts, .competence, .affairs, .staff, .socials, .clients, .address, .filter, .examples {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.site-nav__link, .contacts__link, .address__link {
-  text-decoration: none;
-  -webkit-transition: color var(--duration) var(--timing-function);
-  transition: color var(--duration) var(--timing-function);
-}
-
-.site-nav__link:hover, .contacts__link:hover, .address__link:hover, .site-nav__link:focus, .contacts__link:focus, .address__link:focus {
-  color: var(--accent-color);
-}
-
-.style {
-  border: 1px solid var(--border-header-color);
-}
-
-.head-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .nav {
@@ -190,6 +177,141 @@ img {
   fill: currentColor;
 }
 
+.hero__button {
+  padding: 10px 32px;
+  min-width: 200px;
+  display: block;
+  margin: 0 auto;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: background var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: background var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: background var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
+  transition: background var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+}
+
+.hero__button:hover, .hero__button:focus {
+  background: var(--hover-button-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.reg-form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  border: none;
+  background: var(--accent-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  cursor: pointer;
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  border: none;
+  background-color: var(--primary-white-color);
+  cursor: pointer;
+  -webkit-transition: color var(--duration) var(--timing-function);
+  transition: color var(--duration) var(--timing-function);
+}
+
+.modal__button:hover, .modal__button:focus {
+  color: var(--accent-color);
+}
+
+.form__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 200px;
+  margin-left: 12px;
+  padding: 10px 28px 10px 29px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter__button {
+  padding: 6px 22px;
+  color: var(--title-text-color);
+  background-color: var(--bg-color-filter);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  -webkit-transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+}
+
+.filter__button:hover, .filter__button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.filter__button--main {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.style {
+  border: 1px solid var(--border-header-color);
+}
+
+.head-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo {
   display: block;
   padding-top: 24px;
@@ -224,8 +346,8 @@ img {
 }
 
 .hero {
-  width: 100%;
   height: 600px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -248,34 +370,6 @@ img {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.hero__button {
-  padding: 10px 32px;
-  min-width: 200px;
-  display: block;
-  margin: 0 auto;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  text-align: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  -webkit-transition: background var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: background var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: background var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
-  transition: background var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-}
-
-.hero__button:hover, .hero__button:focus {
-  background: var(--hover-button-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .backdrop {
@@ -321,22 +415,6 @@ img {
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(2);
           transform: translate(-50%, -50%) scale(2);
-}
-
-.modal__button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 0;
-  border: none;
-  background-color: var(--primary-white-color);
-  cursor: pointer;
-  -webkit-transition: color var(--duration) var(--timing-function);
-  transition: color var(--duration) var(--timing-function);
-}
-
-.modal__button:hover, .modal__button:focus {
-  color: var(--accent-color);
 }
 
 .reg-form {
@@ -477,32 +555,6 @@ img {
 
 .reg-form__policy {
   color: var(--accent-color);
-}
-
-.reg-form__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 200px;
-  height: 50px;
-  margin: 0 auto;
-  border: none;
-  background: var(--accent-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-  cursor: pointer;
 }
 
 .competence {
@@ -822,30 +874,6 @@ specifity */
   color: var(--primary-white-color);
 }
 
-.form__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  width: 200px;
-  margin-left: 12px;
-  padding: 10px 28px 10px 29px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-  background: var(--accent-color);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: 0;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -861,34 +889,6 @@ specifity */
 
 .filter__item + .filter__item {
   margin-left: 8px;
-}
-
-.filter__button {
-  padding: 6px 22px;
-  color: var(--title-text-color);
-  background-color: var(--bg-color-filter);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
-  -webkit-transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
-  transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-}
-
-.filter__button:hover, .filter__button:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.filter__button--main {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
 }
 
 .examples {
